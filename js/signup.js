@@ -71,6 +71,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 const user = userCredential.user;
                 console.log("User signed up:", user.uid);
 
+                // Fetch user's profession from the database under "user" branch
+                database.ref('users/' + user.uid).once('value')
+                .then(snapshot => {
+                    // Close loading spinner
+                    Swal.close();
+
+                    const userData = snapshot.val();
+
+                    // Check if userData is not null
+                    if (userData) 
+                    {
+                        const profession = userData.whatJob;
+                        console.log("User profession:", profession);
+
+                        // Create a new branch with the profession as the key
+                        const professionRef = database.ref(profession);
+
+                        // Set the UID as the key and username as the value under the profession branch
+                        professionRef.child(user.uid).set(userData.username)
+                            .then(() => {
+                                console.log("User added to profession branch successfully.");
+                            })
+                            .catch(error => {
+                                console.error('Error adding user to profession branch:', error);
+                            });
+                    }
+                })
+                .catch(error => {
+                    // Close loading spinner
+                    Swal.close();
+                    console.error('Error fetching user data:', error);
+                });
+
                 // Add user details to the database under 'users' branch
                 database.ref('users/' + user.uid).set({
                     email: email,

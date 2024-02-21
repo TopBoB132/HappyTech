@@ -15,21 +15,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const firebaseConfig = {
             apiKey: "AIzaSyDnrqY6QcC7sy0Bs2b5rqbMEdxnSivHnYw",
             authDomain: "test-450b4.firebaseapp.com",
-            databaseURL: "https://test-450b4-default-rtdb.firebaseio.com/",
+            databaseURL: "https://test-450b4-default-rtdb.firebaseio.com",
             projectId: "test-450b4",
             storageBucket: "test-450b4.appspot.com",
             messagingSenderId: "1064982470352",
             appId: "1:1064982470352:web:0e4c3341608f5c8a9688d5",
             measurementId: "G-BN586LR0SR"
         };
-
+        
         firebase.initializeApp(firebaseConfig);
     }
 
     // DOM elements
     const auth = firebase.auth();
     const signInButton = document.getElementById('signInButton');
-    const galleryLink = document.getElementById('gallery');
+    const managerLink = document.getElementById('manager');
 
     // Function to handle sign-out
     function handleSignOut(event) {
@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         }).then(() => {
                             // Redirect to index.html after SweetAlert2 dismiss
                             console.log("Redirecting to index.html...");
+                            console.log("exit3");
                             window.location.href = 'index.html';
                         });
                     })
@@ -90,11 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auth state changes
     auth.onAuthStateChanged(user => {
-        if (user) {
+        if (user) 
+        {
             // User is signed in
             console.log("User is signed in:", user.uid);
             signInButton.textContent = "התנתקות";
-            galleryLink.style.visibility = 'visible'; // Show the gallery link
+            firebase.database().ref('/users/' + user.uid + '/isManager').once('value')
+            .then(function(snapshot) {
+                if (snapshot.val() === false) 
+                {
+                    managerLink.style.visibility = 'hidden'; // Show the manager link if user is manager
+                }
+            });
             signInButton.addEventListener('click', handleSignOut); // Attach event listener
             loadingToast.close(); // Close loading indicator
         } 
@@ -104,14 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("User is signed out.");
             signInButton.textContent = "התחברות";
             signInButton.href = "signin.html";
-            galleryLink.style.visibility = 'hidden';
+            managerLink.style.visibility = 'hidden';
             signInButton.removeEventListener('click', handleSignOut); // Remove event listener
-            loadingToast.close(); // Close loading indicator
+            loadingToast.close(); // Close loading indicator            
         }
     });
 });
-
-// Redirect to index.html if the user isn't signed in
-if (!firebase.auth().currentUser && window.location.href !== "index.html") {
-    window.location.href = "index.html";
-}
