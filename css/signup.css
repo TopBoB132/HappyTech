@@ -1,0 +1,50 @@
+body 
+{
+    font-family: Arial, sans-serif !important;
+    background-color: lightgray !important;
+    color: #333 !important;
+}
+
+.card
+{
+    background-color: #f1ece0!important;
+    border-radius: 15px !important; /* Adjust border-radius for slightly rounded corners */
+    font-weight: bold;
+}
+
+.form-control 
+{
+    border-radius: 10px !important;
+}
+
+.btn-primary 
+{
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+    transition: background-color 0.3s, border-color 0.3s !important;
+}
+
+.btn-primary:hover 
+{
+    background-color: #138496 !important;
+    border-color: #138496 !important;
+}
+
+.form-select 
+{
+    border-radius: 10px !important;
+}
+
+.form-select option 
+{
+    background-color: #f1ece0 !important; /* Background color for dropdown options */
+    color: #333 !important; /* Text color for dropdown options */
+    border-radius: 10px !important; /* Rounded corners for dropdown options */
+    padding: 10px 15px !important; /* Adjust padding */
+    font-size: 20px !important; /* Adjust font size */
+}
+
+.form-select:focus 
+{
+    outline: none !important; /* Remove outline on focus */
+}

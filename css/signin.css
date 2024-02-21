@@ -1,0 +1,30 @@
+body 
+{
+    font-family: Arial, sans-serif !important;
+    background-color: lightgray !important;
+}
+
+.card
+{
+    background-color: #f1ece0 !important;
+    border-radius: 15px !important; /* Adjust border-radius for slightly rounded corners */
+    font-weight: bold;
+}
+
+.form-control 
+{
+    border-radius: 10px !important;
+}
+
+.btn-primary 
+{
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+    transition: background-color 0.3s, border-color 0.3s !important;
+}
+
+.btn-primary:hover 
+{
+    background-color: #138496 !important;
+    border-color: #138496 !important;
+}
