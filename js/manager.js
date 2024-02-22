@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(!clicked)
                 {
                     console.log("btn " + signInButton.checke);
-                    console.log("exit3");
                     window.location.href = 'index.html';
                 }
             }
