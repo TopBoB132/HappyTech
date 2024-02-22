@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
     // Firebase configuration
     const firebaseConfig = {
         apiKey: "AIzaSyDnrqY6QcC7sy0Bs2b5rqbMEdxnSivHnYw",
@@ -111,4 +112,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Optional: Redirect to login page or update UI
         }
     });
+    
+});
+
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+
+togglePassword.addEventListener('click', function (e) {
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+  this.querySelector('i').classList.toggle('bi-eye');
+  this.querySelector('i').classList.toggle('bi-eye-slash');
 });

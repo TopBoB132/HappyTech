@@ -141,3 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     });
 });
+
+document.querySelectorAll('.toggle-password').forEach(button => {
+    button.addEventListener('click', function () {
+      const input = this.previousElementSibling; // Get the input field before the button
+      const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+      input.setAttribute('type', type);
+      this.querySelector('i').classList.toggle('bi-eye');
+      this.querySelector('i').classList.toggle('bi-eye-slash');
+    });
+  });
