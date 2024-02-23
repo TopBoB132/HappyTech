@@ -15,3 +15,17 @@ body
   transform: scale(1.1); /* Increase the size of the image on hover */
   transition: transform 0.3s ease; /* Add smooth transition effect */
 }
+
+  /* Footer styles */
+  .footer {
+    background-color: #d9e8ef;
+    padding: 10px 0;
+  }
+  
+  .footer .container {
+    font-size: 14px;
+  }
+  
+  .footer .text-muted {
+    color: #333;
+  }

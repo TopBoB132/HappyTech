@@ -15,30 +15,6 @@ body
     color: #007EA7 !important;
 }
 
-/* Navbar styles */
-.navbar 
-{
-    background-color: #d9e8ef !important;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) !important; /* Add shadow effect */
-}
-
-.navbar-brand 
-{
-    color: #007EA7 !important; /* Change header text color to blue */
-    font-size: 2rem !important; /* Increase font size for the header */
-}
-
-.navbar-nav .nav-link 
-{
-    color: #007EA7 !important; /* Change nav link text color to blue */
-    transition: color 0.3s ease !important; /* Add transition effect for smoother color change */
-}
-
-.navbar-nav .nav-link:hover 
-{
-    color: #c3d7dd !important; /* Change nav link text color on hover */
-}
-
 /* Content styles */
 .about-us, .vision, .smart-bands 
 {
@@ -101,7 +77,7 @@ body
   /* Footer styles */
 .footer {
     background-color: #d9e8ef;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   
   .footer .container {
