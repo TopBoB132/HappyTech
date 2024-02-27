@@ -14,7 +14,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light" style="direction: ltr;">
+  <nav class="navbar navbar-expand-lg navbar-light " style="direction: ltr;">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="img/logo.png" alt="Hygiene Monitor Logo" width="80" height="80" class="d-inline-block align-top">
@@ -35,7 +35,13 @@
             <a id="contact" class="nav-link" href="contact.html">צור קשר</a>
           </li>
           <li class="nav-item">
-            <a id="manager" class="nav-link" href="managerPanel.html">פאנל מנהל</a>
+            <a id="user" class="nav-link" href="userPanel.html" style="visibility: hidden;">פאנל משתמש</a>
+          </li>
+          <li class="nav-item">
+            <a id="manager" class="nav-link" href="managerPanel.html" style="visibility: hidden;">פאנל מנהל</a>
+          </li>
+          <li class="nav-item">
+            <a id="shared" class="nav-link" href="userSharingPanel.html" style="visibility: hidden;">מידע ששותף</a>
           </li>
         </ul>
       </div>
@@ -44,12 +50,11 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-
-    <div class="container mt-5">
-      <div class="row">
+    <div class="container">
+      <div class="row banner rounded shadow-sm py-3">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
           <h1 id="welcomeMessage">ברוכים הבאים עלינו!</h1>
-          <h2>אנו חברה המתמחה בפיתוח שעונים וקידום מודעות להיגיינה</h2>
+          <h2>אנו חברה המתמחה בפיתוח שעונים וקידום מודעות להיגיינה dddd</h2>
         </div>
         <div class="col-lg-6 order-1">
           <img src="img/hero-img.png" class="img-fluid animated" alt="">
@@ -60,7 +65,7 @@
   </section><!-- End Hero -->
 
   <!-- Content -->
-  <div class="container mt-3 ">
+  <div class="container mt-5 ">
     <div class="about-us">
       <h4 class="subsection-heading">אודות החברה:</h4>
       <p>

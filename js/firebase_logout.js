@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const auth = firebase.auth();
     const signInButton = document.getElementById('signInButton');
     const managerLink = document.getElementById('manager');
+    const userLink = document.getElementById('user');
+    const sharedLink = document.getElementById('shared');
 
     // Function to handle sign-out
     function handleSignOut(event) {
@@ -93,14 +95,18 @@ document.addEventListener('DOMContentLoaded', function() {
     auth.onAuthStateChanged(user => {
         if (user) 
         {
+            // Show user panel
+            userLink.style.visibility = 'visible';
             // User is signed in
             console.log("User is signed in:", user.uid);
             signInButton.textContent = "התנתקות";
             firebase.database().ref('/users/' + user.uid + '/isManager').once('value')
             .then(function(snapshot) {
-                if (snapshot.val() === false) 
+                if (snapshot.val() === true) 
                 {
-                    managerLink.style.visibility = 'hidden'; // Show the manager link if user is manager
+                    console.log("check");
+                    managerLink.style.visibility = 'visible'; // Show the manager link if user is manager
+                    sharedLink.style.visibility = 'visible'; // Show the shared link if user is manager
                 }
             });
             signInButton.addEventListener('click', handleSignOut); // Attach event listener

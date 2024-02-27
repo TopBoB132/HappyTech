@@ -23,6 +23,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
     const repeatPasswordInput = document.getElementById('repeat-password');
     const signUpButton = document.querySelector('.btn-primary');
+    let clicked = false;
+
+    document.getElementById('signUpBtn').addEventListener('click', function() {
+        clicked = true;
+    });
+
+    // Check if a user is already signed in
+    auth.onAuthStateChanged(user => {
+        if (user) 
+        {
+            if (!clicked)
+            {
+                // User is signed in, redirect to index.html
+                window.location.href = 'index.html';
+            }
+        }
+    });
 
     // Signup event
     signUpButton.addEventListener('click', function(event) {
@@ -109,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     email: email,
                     handWashTimes: 0,
                     isManager: false,
+                    isSharedHWT: false,
                     username: name,
                     whatJob: profession
                 })
@@ -117,8 +135,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     Swal.close();
                     console.log("User details added to database successfully.");
 
-                    // Redirect to login page after signup
-                    window.location.href = 'index.html';
+                    // Show success message
+                    Swal.fire({
+                    icon: 'success',
+                    title: 'Sign Up Successful',
+                    text: 'You have successfully signed up.',
+                    timer: 1500
+                }).then(() => {
+                    window.location.href = 'index.html'; // Redirect user
+                });
                 })
                 .catch(error => {
                     // Close loading spinner

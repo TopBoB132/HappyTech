@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     // Firebase configuration
     const firebaseConfig = {
         apiKey: "AIzaSyDnrqY6QcC7sy0Bs2b5rqbMEdxnSivHnYw",
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messagingSenderId: "1064982470352",
         appId: "1:1064982470352:web:0e4c3341608f5c8a9688d5",
         measurementId: "G-BN586LR0SR"
-        };
+    };
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -22,6 +21,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const userPasswordInput = document.getElementById('password');
     const loginButton = document.querySelector('.btn-primary');
     const backButton = document.querySelectorAll('.btn-primary')[1]; // Select the second button
+    let clicked = false;
+
+    document.getElementById('signInButton').addEventListener('click', function() {
+        clicked = true;
+    });
+
+    // Check if a user is already signed in
+    auth.onAuthStateChanged(user => {
+        if (user) 
+        {
+            if (!clicked)
+            {
+                // User is signed in, redirect to index.html
+                window.location.href = 'index.html';
+            }
+        }
+    });
 
     // Login event
     loginButton.addEventListener('click', function(event) {
@@ -38,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        // Sign in with email and password
         auth.signInWithEmailAndPassword(email, password)
             .then(userCredential => {
                 // On successful login
@@ -64,8 +81,15 @@ document.addEventListener('DOMContentLoaded', function() {
                             professionRef.child(user.uid).set(userData.username)
                                 .then(() => {
                                     console.log("User added to profession branch successfully.");
-                                    // Redirect to index.html after adding profession
-                                    window.location.href = 'index.html'; // Redirect user
+                                    // Show success message
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Login Successful',
+                                        text: 'You have successfully logged in.',
+                                        timer: 1500
+                                    }).then(() => {
+                                        window.location.href = 'index.html'; // Redirect user
+                                    });
                                 })
                                 .catch(error => {
                                     console.error('Error adding user to profession branch:', error);
@@ -112,15 +136,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Optional: Redirect to login page or update UI
         }
     });
-    
-});
 
-const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
+    // Toggle password visibility
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
 
-togglePassword.addEventListener('click', function (e) {
-  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-  password.setAttribute('type', type);
-  this.querySelector('i').classList.toggle('bi-eye');
-  this.querySelector('i').classList.toggle('bi-eye-slash');
+    togglePassword.addEventListener('click', function(e) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.querySelector('i').classList.toggle('bi-eye');
+        this.querySelector('i').classList.toggle('bi-eye-slash');
+    });
 });

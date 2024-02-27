@@ -27,21 +27,27 @@
           <li class="nav-item">
             <a id="signInButton" class="nav-link" href="signin.html"></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a id="signInButton" class="nav-link" href="gallery.html">גלריה</a>
           </li>
           <li class="nav-item">
             <a id="contact" class="nav-link" href="contact.html">צור קשר</a>
           </li>
           <li class="nav-item">
-            <a id="manager" class="nav-link" href="managerPanel.html">פאנל מנהל</a>
+            <a id="user" class="nav-link" href="userPanel.html" style="visibility: hidden;">פאנל משתמש</a>
+          </li>
+          <li class="nav-item">
+            <a id="manager" class="nav-link" href="managerPanel.html" style="visibility: hidden;">פאנל מנהל</a>
+          </li>
+          <li class="nav-item">
+            <a id="shared" class="nav-link" href="userSharingPanel.html" style="visibility: hidden;">מידע ששותף</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Gallery -->
+ 
   <div class="container-fluid">
     <div class="px-lg-5">
       <div class="row py-5">
@@ -55,7 +61,7 @@
           </div>
         </div>
       </div>
-  
+      <!-- Gallery -->
       <div class="row">
         <!-- Gallery item -->
         <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
@@ -136,7 +142,6 @@
           </div>
         </div>
         <!-- End -->
-  
       </div>
     </div>
   </div>
@@ -161,6 +166,5 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Your Firebase and JavaScript code -->
   <script src="js/firebase_logout.js"></script>
-  <!-- <script src="js/gallery.js"></script> -->
 </body>
 </html>

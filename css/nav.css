@@ -3,6 +3,10 @@ body
 {
   overflow-y: scroll; /* Always show scrollbar */
 }
+.nav-item
+{
+  margin-left: 16px;
+}
 
 .navbar 
 {
@@ -21,4 +25,9 @@ body
 .navbar-nav .nav-link:hover 
 {
   color: #21435d5d !important; /* Change nav link text color on hover */
+}
+
+.active
+{
+  border-bottom: 2px solid #007bff; /* Change the color as needed */
 }
