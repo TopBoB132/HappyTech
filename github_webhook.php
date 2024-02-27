@@ -27,7 +27,7 @@ if (function_exists('hash_hmac') && function_exists('hash_equals')) {
     if (hash_equals($expectedSignature, $githubSignature)) {
         logToFile("Valid signature.");
         if (!$cliMode) {
-            $cmd = 'cd /var/www/html/HappyTech && git pull';
+            $cmd = 'cd /var/www/html/HappyTech && git pull origin main';
             logToFile("Executing: $cmd");
             $output = shell_exec($cmd);
             logToFile("Output: " . $output);
