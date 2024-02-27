@@ -9,7 +9,7 @@ function logToFile($message) {
 }
 
 $cliMode = php_sapi_name() == 'cli';
-$githubSignature = $cliMode ? 'sha256=' . hash_hmac('sha256', 'test', $secret) : ($_SERVER['HTTP_X_HUB_SIGNATURE_256'] ?? '');
+$githubSignature = $cliMode ? 'sha256=' . hash_hmac('sha256', 'test', $secret) : ($_SERVER['HTTP_X_HUB_SIGNATURE'] ?? '');
 $payload = $cliMode ? 'test' : file_get_contents("php://input");
 
 logToFile("Received payload: " . $payload);
@@ -27,7 +27,8 @@ if (function_exists('hash_hmac') && function_exists('hash_equals')) {
     if (hash_equals($expectedSignature, $githubSignature)) {
         logToFile("Valid signature.");
         if (!$cliMode) {
-            $cmd = 'cd /var/www/html/HappyTech && git pull';
+            chdir('/var/www/html/HappyTech'); // Change working directory
+            $cmd = '/usr/bin/git pull'; // Provide full path to git executable
             logToFile("Executing: $cmd");
             $output = shell_exec($cmd);
             logToFile("Output: " . $output);
