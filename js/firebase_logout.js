@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(function(snapshot) {
                 if (snapshot.val() === true) 
                 {
-                    console.log("check");
                     managerLink.style.visibility = 'visible'; // Show the manager link if user is manager
                     sharedLink.style.visibility = 'visible'; // Show the shared link if user is manager
                 }

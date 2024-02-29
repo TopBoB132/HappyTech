@@ -8,6 +8,8 @@
   <link rel="icon" type="image/x-icon" href="img/logo.png">
   <!-- Custom CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/user.css">
 </head>
@@ -47,6 +49,16 @@
         </div>
     </nav>
 
+    <!-- Add a Banner -->
+    <div class="banner">
+        <h1>ברוך הבא לפאנל משתמש</h1>
+        <div class="card-body rounded shadow-sm py-3 subbanner">
+            <label for="calendar">תבחר תאריך:</label>
+            <input type="text" id="calendar" placeholder="Select Date">
+            <p id="handwashTime">עד עכשיו בוצעו <span id="handwashTimeValue">-</span> שטיפות</p>
+        </div>
+    </div>
+
     <div class="card-body py-5">
         <canvas id="lineChart"></canvas>
     </div>
@@ -71,9 +83,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Your Firebase and JavaScript code -->
     <script src="js/firebase_logout.js"></script>
-    <script src="js/grath.js"></script>
+    <script src="js/userPanel.js"></script>
 </body>
 </html>
    
