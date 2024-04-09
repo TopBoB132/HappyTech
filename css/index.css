@@ -102,3 +102,9 @@ body {
   background: #52c7f290;
   box-shadow: 0px 0px 15px #52c7f290 !important; /* Add shadow effect on hover */
 }
+
+.move-left 
+{
+  position: relative;
+  left: -50px; /* Adjust this value as needed */
+}

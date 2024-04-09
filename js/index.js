@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } 
         else 
         {
-            document.getElementById('welcomeMessage').innerText = "ברוכים הבאים עלינו!";
+            document.getElementById('welcomeMessage').innerText = "ברוכים הבאים אלינו!";
         }
     });
 });
