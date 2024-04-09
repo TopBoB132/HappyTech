@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const usersRef = firebase.database().ref('users/' + user.uid + '/handWashTimes');
                 usersRef.once('value', function(snapshot) {
                     const handWashTimes = snapshot.val();
-                    document.getElementById('handwashTimeValue').textContent = handWashTimes;
+                    document.getElementById('handwashTimeValue').textContent = parseInt(handWashTimes);
                 });
             }
         });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Listen for changes in handWashTimes node
                 usersRefTimes.on('value', function(snapshot) {
                     const handWashTimes = snapshot.val();
-                    document.getElementById('handwashTimeValue').textContent = handWashTimes;
+                    document.getElementById('handwashTimeValue').textContent = parseInt(handWashTimes);;
                 });
                 const usersRef = firebase.database().ref('users/' + user.uid + '/HandWashHistory');
                 usersRef.once('value', function(snapshot) {
