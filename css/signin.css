@@ -1,0 +1,31 @@
+body 
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+    background-color: #f5f5f5 !important;
+}
+
+.card 
+{
+    color: white;
+    background: #52c7f290;
+    box-shadow: 0px 0px 15px #52c7f290 !important;
+    border-radius: 10px !important; /* Adjust border-radius for slightly rounded corners */
+    font-weight: bold !important;
+}
+
+.card h2 
+{
+    text-decoration: underline; /* Add underline to the h2 elements inside the card */
+}
+
+.btn-primary 
+{
+    background-color: #488fdfea !important;
+    border-color: #488fdfea !important;
+}
+
+.btn-primary:hover 
+{
+    background-color: #3170b7d8 !important;
+    border-color: #3170b7d8 !important;
+}

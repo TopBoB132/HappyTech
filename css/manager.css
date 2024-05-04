@@ -1,0 +1,141 @@
+html {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+
+body {
+  margin-bottom: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  background-color: #f5f5f5 !important;
+}
+
+/* Footer styles */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #d9e8ef;
+  padding: 10px 0;
+}
+
+.footer .container {
+  font-size: 14px;
+}
+
+.footer .text-muted {
+  color: #333;
+}
+
+/* Custom CSS for the table */
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Adjust the spacing between rows */
+  width: 100%; /* Ensure table takes full width */
+  position: relative; /* Set position to relative for the table */
+}
+
+.custom-table thead th {
+  text-align: center;
+  background-color: #39b9e8a2; /* Header background color */
+  color: #fff; /* Header text color */
+  border: none;
+  padding: 15px; /* Adjust header cell padding */
+}
+
+.custom-table tbody td {
+  position: relative; /* Set position to relative for table cells */
+  text-align: center;
+  padding: 15px; /* Adjust cell padding */
+  padding-right: 20px; /* Add space between cells */
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa; /* Alternate row background color */
+}
+
+.custom-table tbody tr:hover td {
+  background-color: #dbdee3 !important; /* Row background color on hover */
+}
+
+.table-container {
+  background-color: #e4eff4d6;
+  border-radius: 0px; /* Adjust border radius for rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  padding: 20px; /* Add padding around the table */
+  box-shadow: 0px 0px 20px 5px #9bacac84 !important; /* White glowing effect */
+}
+
+.custom-table {
+  margin: 0; /* Remove default margin to ensure table fits inside the frame */
+}
+
+/* Custom CSS for isManager checkboxes */
+.manager-checkbox {
+  appearance: none; /* Remove default appearance */
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height */
+  border-radius: 50%; /* Make it round */
+  border: 2px solid #39b9e8; /* Set the border color */
+  cursor: pointer; /* Show pointer cursor */
+}
+
+/* Custom CSS for checked state */
+.manager-checkbox:checked {
+  background-color: #39b9e8; /* Set background color to blue when checked */
+}
+
+/* Custom CSS for checked state */
+.manager-checkbox:hover {
+  background-color: #3d6675; /* Set background color to blue when checked */
+}
+
+/* Position edit icon absolutely within the cell */
+.edit-icon {
+  position: absolute;
+  left: 5px; /* Adjust left position as needed */
+  top: 50%; /* Align icon vertically in the middle */
+  transform: translateY(-50%); /* Adjust vertical alignment */
+  cursor: pointer; /* Show pointer cursor */
+}
+
+/* Style for the filter banner */
+.filter-banner {
+  background-color: #39b9e8a2; /* Banner background color */
+  padding: 20px 0; /* Adjust banner padding */
+}
+
+.filter-banner h2 {
+  color: #fff; /* Banner text color */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.filter-banner .container {
+  position: relative; /* Position relative to center absolute elements */
+}
+
+/* Adjust the filter checkboxes alignment */
+.filter-checkboxes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Style for the search input */
+.input-group .form-control {
+  border-radius: 20px; /* Round input corners */
+}
+
+/* Style for the checkboxes */
+.form-check-input {
+  margin-right: 5px; /* Add space between checkbox and label */
+}
+
+.form-check-label {
+  color: #fff; /* Checkbox label color */
+}
+
+/* Corrected hover effect */
+.custom-table tbody tr:hover td {
+  background-color: #e9ecef; /* Row background color on hover */
+}

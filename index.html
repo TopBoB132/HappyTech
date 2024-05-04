@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- icon logo -->
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <!-- Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light " style="direction: ltr;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Hygiene Monitor Logo" width="80" height="80" class="d-inline-block align-top">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav ms-auto" style="float: right; direction: rtl;">
+          <li class="nav-item">
+            <a id="signInButton" class="nav-link" href="signin.html"></a>
+          </li>
+          <li class="nav-item">
+            <a id="gallery" class="nav-link" href="gallery.html">גלריה</a>
+          </li>
+          <li class="nav-item">
+            <a id="contact" class="nav-link" href="contact.html">צור קשר</a>
+          </li>
+          <li class="nav-item">
+            <a id="user" class="nav-link" href="userPanel.html" style="visibility: hidden;">פאנל משתמש</a>
+          </li>
+          <li class="nav-item">
+            <a id="manager" class="nav-link" href="managerPanel.html" style="visibility: hidden;">פאנל מנהל</a>
+          </li>
+          <li class="nav-item">
+            <a id="shared" class="nav-link" href="userSharingPanel.html" style="visibility: hidden;">מידע ששותף</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row banner rounded shadow-sm py-3">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+          <h1 id="welcomeMessage">ברוכים הבאים אלינו!</h1>
+          <h2>אנו חברה המתמחה בפיתוח שעונים וקידום מודעות להיגיינה</h2>
+          <h2>בשיתוף פעולה עם בית חולים פוריה</h2>
+          <img src="img/PoriaHospital.png" class="img-fluid move-left p-3" alt="" width="200" height="100">
+        </div>
+        <div class="col-lg-6 order-1">
+          <img src="img/hero-img.png" class="img-fluid animated">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <!-- Content -->
+  <div class="container mt-5 ">
+    <div class="about-us">
+      <h4 class="subsection-heading">אודות החברה:</h4>
+      <p>
+        אנחנו חברה בתחום החדשנות בתעשיית הבריאות, המתמחה בייצור של צמידים חכמים המיועדים לקידום ולמעקב אחר היגיינת הידיים.
+        משימתנו היא לשפר את בטיחות המטופל ולהפחית את התפשטות הדלקות, מתוך מתן כלי עבודה יעילים ואמינים למקצועני הבריאות.
+      </p>
+    </div>
+
+    <div class="vision">
+      <h4 class="subsection-heading">החזון שלנו:</h4>
+      <p>
+        ב-Hygiene Monitor אנו רואים עולם שבו היגיית הידיים היא הרגל אוטומטית עבור כל אדם אשר עובד בתחום הבריאות, 
+        ומבטיחים את הסטנדרט הגבוה ביותר של טיפוח ורווחת המטופל.
+        באמצעות הפיתוח הטכנולוגי המתקדם, אנו שואפים לשנות את הדרך שבה מתבצעת היגיינת הידיים בסביבות הרפואיות.
+      </p>
+    </div>
+
+    <div class="smart-bands">
+      <h4 class="subsection-heading">הצמידים החכמים שלנו:</h4>
+      <p>
+        מוצר הדגל שלנו הוא הצמיד החכם, הידוע בייצורו של יחידות נשיאה לצוותים רפואיים. 
+        צמידים אלו משלבים חיישנים מתקדמים ויכולות איסוף מידע מתקדמות, שמאפשרים לעקוב בזמן אמת אחר היגיית הידיים.
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer mt-5">
+    <div class="container text-center">
+      <span class="text-muted">© 2024 All rights reserved</span>
+      &nbsp;&nbsp;&nbsp; <!-- Adding spaces -->
+      <a href="https://github.com/TopBoB132" target="_blank" rel="noopener noreferrer">
+        <img src="img/github-mark-white.png" width="30" height="30">
+      </a>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Firebase JS SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.0/firebase-database.js"></script>
+  
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+
+  <!-- Your Firebase and JavaScript code -->
+  <script src="js/firebase_logout.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
