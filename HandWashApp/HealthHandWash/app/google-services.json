@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1064982470352",
+    "firebase_url": "https://test-450b4-default-rtdb.firebaseio.com",
+    "project_id": "test-450b4",
+    "storage_bucket": "test-450b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064982470352:android:84d992b1dd3f36849688d5",
+        "android_client_info": {
+          "package_name": "com.hospital.healthhandwash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFOrZdu_rzw4dqnxjUo7Hs0c_-GTE1K8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
