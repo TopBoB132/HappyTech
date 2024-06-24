@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Hygiene Monitor</string>
+    <string name="title_activity_login_screen">LoginScreen</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="shared_pref_file_name">healthHandWash</string>
+    <string name="shared_pref_name">name</string>
+    <string name="shared_pref_profession">profession</string>
+    <string name="shared_pref_email">email</string>
+    <string name="shared_pref_loggedin">logged in</string>
+    <string name="shared_pref_hand_wash_times_history">hand wash times history</string>
+    <string name="share_history_title_dialog">Share History</string>
+    <string name="share_history_text_dialog">Are you inserted to share hand wash times history with you\'re manager?</string>
+    <string name="share_history_share_btn_dialog">share</string>
+    <string name="share_history_decline_btn_dialog">decline</string>
+    <string name="shared_pref_Hand_Wash_History_List">Hand wash history list</string>
+    <string name="shared_pref_user_uid">User Uid</string>
+    <string name="shared_pref_hwt_exit">hwt when exit</string>
+    <string name="profession_hint">Profession</string>
+
+</resources>

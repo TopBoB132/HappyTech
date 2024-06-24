@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuHistory"
+        android:icon="@drawable/ic_history"
+        android:orderInCategory="100"
+        android:title="History"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuShareHistory"
+        android:icon="@drawable/ic_share"
+        android:orderInCategory="200"
+        android:title="Share History"
+        app:showAsAction="never"/>
+
+</menu>
